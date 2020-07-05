@@ -1,0 +1,10 @@
+Host frontend.scot.local
+  HostName 10.205.0.28
+  User vagrant
+  Port 22
+  UserKnownHostsFile /dev/null
+  StrictHostKeyChecking no
+  PasswordAuthentication no
+  IdentityFile /home/vagrant/.ssh/id_rsa_fe
+  IdentitiesOnly yes
+  LogLevel FATAL
