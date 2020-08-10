@@ -57,7 +57,7 @@ Vagrant.configure("2") do |config|
       server.vm.provision "file", source: "./keys/id_rsa_fe.pub", destination: "~/.ssh/authorized_keys"
 
       server.vm.provision "shell", inline: <<-SHELL
-         nodejs_version=v12.18.2
+         nodejs_version=v12.18.3
          nodejs_distro=linux-x64
 
          wget https://nodejs.org/dist/${nodejs_version}/node-${nodejs_version}-${nodejs_distro}.tar.xz
@@ -79,7 +79,7 @@ Vagrant.configure("2") do |config|
 
       # Run as unpriviliged user to configure for 'vagrant' user
       server.vm.provision "shell", privileged: false, inline: <<-SHELL
-         nodejs_version=v12.18.2
+         nodejs_version=v12.18.3
          nodejs_distro=linux-x64
 
          echo "" >> ~/.profile
